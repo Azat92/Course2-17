@@ -7,11 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Protocols.h"
 
-@interface User : NSObject
-@property (nonatomic, strong) NSNumber *uid;
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSNumber *rating;
+@interface User : NSObject <UserProtocol>
 
 + (instancetype)userWithID:(NSInteger)uid name:(NSString *)name andRating:(double)rating;
+
 @end

@@ -9,9 +9,11 @@
 #import "TableViewController.h"
 #import "BooksTableViewController.h"
 #import "User.h"
+#import "CoreDataWorker.h"
+#import "Protocols.h"
 
 @interface TableViewController ()
-@property (nonatomic, readonly) DatabaseWorker *dbWorker;
+@property (nonatomic, readonly) id <DataAdapterProtocol> dbWorker;
 @property (nonatomic, readonly) NSArray *users;
 @end
 
@@ -19,9 +21,9 @@
 @synthesize dbWorker = _dbWorker;
 @synthesize users = _users;
 
-- (DatabaseWorker *)dbWorker {
+- (id <DataAdapterProtocol>)dbWorker {
     if (!_dbWorker)
-        _dbWorker = [DatabaseWorker new];
+        _dbWorker = [CoreDataWorker new];
     return _dbWorker;
 }
 
@@ -45,7 +47,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"UserCellID";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    User *user = self.users[indexPath.row];
+    id <UserProtocol> user = self.users[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@. %@", user.uid, user.name];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Rating: %.2f", [user.rating doubleValue]];
     return cell;

@@ -9,6 +9,9 @@
 #import "Book.h"
 
 @implementation Book
+@synthesize uid;
+@synthesize work;
+@synthesize author;
 
 + (instancetype)bookWithID:(NSInteger)uid work:(NSString *)work andAuthor:(NSString *)author {
     Book *book = [Book new];

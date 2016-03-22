@@ -45,7 +45,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="3Kh-Rd-ipu">
-                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="bookmarks" id="Vck-el-4VC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="Vck-el-4VC">
                             <connections>
                                 <segue destination="Yek-df-uJN" kind="show" identifier="ShowBooksSegue" id="zeh-bb-XeJ"/>
                             </connections>

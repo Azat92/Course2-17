@@ -7,11 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Protocols.h"
 
-@interface Book : NSObject
-@property (nonatomic, strong) NSNumber *uid;
-@property (nonatomic, strong) NSString *work;
-@property (nonatomic, strong) NSString *author;
+@interface Book : NSObject <BookProtocol>
 
 + (instancetype)bookWithID:(NSInteger)uid work:(NSString *)work andAuthor:(NSString *)author;
 

@@ -53,7 +53,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"BookCellId";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    Book *book = self.books[indexPath.row];
+    id <BookProtocol> book = self.books[indexPath.row];
     cell.textLabel.text = [NSString stringWithFormat:@"%@. %@", book.uid, book.work];
     cell.detailTextLabel.text = book.author;
     return cell;

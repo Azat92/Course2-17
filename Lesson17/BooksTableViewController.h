@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DatabaseWorker.h"
+#import "Protocols.h"
 
 @interface BooksTableViewController : UITableViewController
-@property (nonatomic, strong) DatabaseWorker *dbWorker;
+@property (nonatomic, strong) id <DataAdapterProtocol> dbWorker;
 @end
