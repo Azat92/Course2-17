@@ -10,9 +10,13 @@
 #import <CoreData/CoreData.h>
 #import "Protocols.h"
 
+@class CDGrade;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CDUser : NSManagedObject
+
+@property (nonatomic, readonly) NSArray *hasGrades;
 
 + (instancetype)userWithID:(NSInteger)uid name:(NSString *)name andRating:(double)rating inManagedObjectContext:(NSManagedObjectContext *)context;
 

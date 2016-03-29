@@ -1,5 +1,5 @@
 //
-//  CDUser+CoreDataProperties.m
+//  CDGrade+CoreDataProperties.h
 //  Lesson17
 //
 //  Created by Azat Almeev on 29.03.16.
@@ -9,13 +9,15 @@
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "CDUser+CoreDataProperties.h"
+#import "CDGrade.h"
 
-@implementation CDUser (CoreDataProperties)
+NS_ASSUME_NONNULL_BEGIN
 
-@dynamic name;
-@dynamic uid;
-@dynamic rating;
-@dynamic grades;
+@interface CDGrade (CoreDataProperties)
+
+@property (nullable, nonatomic, retain) NSNumber *value;
+@property (nullable, nonatomic, retain) CDUser *user;
 
 @end
+
+NS_ASSUME_NONNULL_END

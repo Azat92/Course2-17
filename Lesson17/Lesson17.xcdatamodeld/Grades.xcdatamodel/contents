@@ -5,13 +5,19 @@
         <attribute name="uid" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="work" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="CDGrade" representedClassName="CDGrade" syncable="YES">
+        <attribute name="value" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDUser" inverseName="grades" inverseEntity="CDUser" syncable="YES"/>
+    </entity>
     <entity name="CDUser" representedClassName="CDUser" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rating" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="uid" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="grades" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="CDGrade" inverseName="user" inverseEntity="CDGrade" syncable="YES"/>
     </entity>
     <elements>
         <element name="CDBook" positionX="-54" positionY="-9" width="128" height="90"/>
-        <element name="CDUser" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="CDUser" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="CDGrade" positionX="-45" positionY="18" width="128" height="75"/>
     </elements>
 </model>

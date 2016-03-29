@@ -20,6 +20,10 @@
 		AA2C9D581C948E5B00D0B172 /* DatabaseWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2C9D571C948E5B00D0B172 /* DatabaseWorker.m */; };
 		AA2C9D5A1C949A3D00D0B172 /* names.txt in Resources */ = {isa = PBXBuildFile; fileRef = AA2C9D591C949A3D00D0B172 /* names.txt */; };
 		AA2C9D5D1C94B5DD00D0B172 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2C9D5C1C94B5DD00D0B172 /* User.m */; };
+		AA3B84D71CAB075900056F91 /* GradesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3B84D61CAB075900056F91 /* GradesTableViewController.m */; };
+		AA3B84DC1CAB07E900056F91 /* CDGrade+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3B84D91CAB07E900056F91 /* CDGrade+CoreDataProperties.m */; };
+		AA3B84DD1CAB07E900056F91 /* CDGrade.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3B84DB1CAB07E900056F91 /* CDGrade.m */; };
+		AA3B84E01CAB152200056F91 /* CustomSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3B84DF1CAB152200056F91 /* CustomSplitViewController.m */; };
 		AA9E63071C9F08690090108F /* CoreDataWorker.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9E63061C9F08690090108F /* CoreDataWorker.m */; };
 		AA9E630B1C9F096E0090108F /* Lesson17.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA9E63091C9F096E0090108F /* Lesson17.xcdatamodeld */; };
 		AA9E63141C9F0A420090108F /* CDBook+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9E630D1C9F0A420090108F /* CDBook+CoreDataProperties.m */; };
@@ -50,6 +54,15 @@
 		AA2C9D591C949A3D00D0B172 /* names.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = names.txt; sourceTree = SOURCE_ROOT; };
 		AA2C9D5B1C94B5DD00D0B172 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		AA2C9D5C1C94B5DD00D0B172 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		AA3B84D41CAB05A700056F91 /* Grades.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Grades.xcdatamodel; sourceTree = "<group>"; };
+		AA3B84D51CAB075900056F91 /* GradesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradesTableViewController.h; sourceTree = "<group>"; };
+		AA3B84D61CAB075900056F91 /* GradesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradesTableViewController.m; sourceTree = "<group>"; };
+		AA3B84D81CAB07E900056F91 /* CDGrade+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CDGrade+CoreDataProperties.h"; sourceTree = "<group>"; };
+		AA3B84D91CAB07E900056F91 /* CDGrade+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CDGrade+CoreDataProperties.m"; sourceTree = "<group>"; };
+		AA3B84DA1CAB07E900056F91 /* CDGrade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDGrade.h; sourceTree = "<group>"; };
+		AA3B84DB1CAB07E900056F91 /* CDGrade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDGrade.m; sourceTree = "<group>"; };
+		AA3B84DE1CAB152200056F91 /* CustomSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSplitViewController.h; sourceTree = "<group>"; };
+		AA3B84DF1CAB152200056F91 /* CustomSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSplitViewController.m; sourceTree = "<group>"; };
 		AA9E63051C9F08690090108F /* CoreDataWorker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataWorker.h; sourceTree = "<group>"; };
 		AA9E63061C9F08690090108F /* CoreDataWorker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataWorker.m; sourceTree = "<group>"; };
 		AA9E630A1C9F096E0090108F /* Lesson17.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Lesson17.xcdatamodel; sourceTree = "<group>"; };
@@ -123,6 +136,10 @@
 				AA2C9D461C94884400D0B172 /* TableViewController.m */,
 				AA26BD871C95C6F900DDBD9B /* BooksTableViewController.h */,
 				AA26BD881C95C6F900DDBD9B /* BooksTableViewController.m */,
+				AA3B84D51CAB075900056F91 /* GradesTableViewController.h */,
+				AA3B84D61CAB075900056F91 /* GradesTableViewController.m */,
+				AA3B84DE1CAB152200056F91 /* CustomSplitViewController.h */,
+				AA3B84DF1CAB152200056F91 /* CustomSplitViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -184,6 +201,10 @@
 		AA9E63081C9F09560090108F /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				AA3B84DA1CAB07E900056F91 /* CDGrade.h */,
+				AA3B84DB1CAB07E900056F91 /* CDGrade.m */,
+				AA3B84D81CAB07E900056F91 /* CDGrade+CoreDataProperties.h */,
+				AA3B84D91CAB07E900056F91 /* CDGrade+CoreDataProperties.m */,
 				AA9E63121C9F0A420090108F /* CDUser.h */,
 				AA9E63131C9F0A420090108F /* CDUser.m */,
 				AA9E63101C9F0A420090108F /* CDUser+CoreDataProperties.h */,
@@ -327,13 +348,17 @@
 				AA2C9D471C94884400D0B172 /* TableViewController.m in Sources */,
 				AA9E630B1C9F096E0090108F /* Lesson17.xcdatamodeld in Sources */,
 				AA9E63171C9F0A420090108F /* CDUser.m in Sources */,
+				AA3B84D71CAB075900056F91 /* GradesTableViewController.m in Sources */,
 				AA2C9D441C94884400D0B172 /* AppDelegate.m in Sources */,
 				AA2C9D581C948E5B00D0B172 /* DatabaseWorker.m in Sources */,
 				AA9E63151C9F0A420090108F /* CDBook.m in Sources */,
 				AA26BD861C95C5EB00DDBD9B /* Book.m in Sources */,
+				AA3B84E01CAB152200056F91 /* CustomSplitViewController.m in Sources */,
 				AA2C9D411C94884400D0B172 /* main.m in Sources */,
 				AA26BD891C95C6F900DDBD9B /* BooksTableViewController.m in Sources */,
+				AA3B84DC1CAB07E900056F91 /* CDGrade+CoreDataProperties.m in Sources */,
 				AA9E63141C9F0A420090108F /* CDBook+CoreDataProperties.m in Sources */,
+				AA3B84DD1CAB07E900056F91 /* CDGrade.m in Sources */,
 				AA9E63161C9F0A420090108F /* CDUser+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,9 +520,10 @@
 		AA9E63091C9F096E0090108F /* Lesson17.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				AA3B84D41CAB05A700056F91 /* Grades.xcdatamodel */,
 				AA9E630A1C9F096E0090108F /* Lesson17.xcdatamodel */,
 			);
-			currentVersion = AA9E630A1C9F096E0090108F /* Lesson17.xcdatamodel */;
+			currentVersion = AA3B84D41CAB05A700056F91 /* Grades.xcdatamodel */;
 			path = Lesson17.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

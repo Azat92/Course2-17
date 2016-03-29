@@ -9,10 +9,8 @@
 #import "CoreDataWorker.h"
 #import "CDUser.h"
 #import "CDBook.h"
-@import CoreData;
 
 @interface CoreDataWorker ()
-@property (nonatomic, readonly) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (nonatomic, readonly) NSManagedObjectModel *managedObjectModel;
 @end
@@ -87,7 +85,7 @@
         _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
         NSURL *storeURL = [self.applicationDocumentsDirectory URLByAppendingPathComponent:@"Lesson17.sqlite"];
         NSError *error = nil;
-        if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+        if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:@{ NSMigratePersistentStoresAutomaticallyOption : @YES, NSInferMappingModelAutomaticallyOption : @YES } error:&error]) {
             NSMutableDictionary *dict = [NSMutableDictionary dictionary];
             dict[NSLocalizedDescriptionKey] = @"Failed to initialize the application's saved data";
             dict[NSLocalizedFailureReasonErrorKey] = @"There was an error creating or loading the application's saved data.";

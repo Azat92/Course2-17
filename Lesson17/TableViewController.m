@@ -8,9 +8,10 @@
 
 #import "TableViewController.h"
 #import "BooksTableViewController.h"
-#import "User.h"
+#import "CDUser.h"
 #import "CoreDataWorker.h"
 #import "Protocols.h"
+#import "GradesTableViewController.h"
 
 @interface TableViewController ()
 @property (nonatomic, readonly) id <DataAdapterProtocol> dbWorker;
@@ -55,6 +56,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    UINavigationController *nc = self.splitViewController.viewControllers.lastObject;
+    BOOL shouldntCreateController = self.splitViewController.viewControllers.count > 1;
+    GradesTableViewController *gvc = shouldntCreateController ? nc.viewControllers.firstObject : [[self.storyboard instantiateViewControllerWithIdentifier:@"GradesVC"] viewControllers].firstObject;
+    gvc.user = self.users[indexPath.row];
+    gvc.dataWorker = self.dbWorker;
+    if (!shouldntCreateController)
+        [nc pushViewController:gvc animated:YES];
 }
 
 @end

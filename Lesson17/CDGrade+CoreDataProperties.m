@@ -1,5 +1,5 @@
 //
-//  CDUser+CoreDataProperties.m
+//  CDGrade+CoreDataProperties.m
 //  Lesson17
 //
 //  Created by Azat Almeev on 29.03.16.
@@ -9,13 +9,11 @@
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "CDUser+CoreDataProperties.h"
+#import "CDGrade+CoreDataProperties.h"
 
-@implementation CDUser (CoreDataProperties)
+@implementation CDGrade (CoreDataProperties)
 
-@dynamic name;
-@dynamic uid;
-@dynamic rating;
-@dynamic grades;
+@dynamic value;
+@dynamic user;
 
 @end

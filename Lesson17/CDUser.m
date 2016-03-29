@@ -9,6 +9,7 @@
 #import "CDUser.h"
 
 @implementation CDUser
+@dynamic hasGrades;
 
 + (instancetype)userWithID:(NSInteger)uid name:(NSString *)name andRating:(double)rating inManagedObjectContext:(NSManagedObjectContext *)context {
     CDUser *user = [NSEntityDescription insertNewObjectForEntityForName:@"CDUser" inManagedObjectContext:context];
