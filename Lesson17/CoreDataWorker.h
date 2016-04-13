@@ -13,4 +13,5 @@
 @interface CoreDataWorker : NSObject <DataAdapterProtocol>
 @property (nonatomic, readonly) NSManagedObjectContext *managedObjectContext;
 - (void)saveContext;
+
 @end

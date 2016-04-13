@@ -9,6 +9,7 @@
 #import "CoreDataWorker.h"
 #import "CDUser.h"
 #import "CDBook.h"
+#import "MyUser.h"
 
 @interface CoreDataWorker ()
 @property (nonatomic, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
@@ -35,6 +36,28 @@
         NSMutableArray *result = [NSMutableArray new];
         [[[namesFileContent componentsSeparatedByString:@"\n"] filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"length > 1"]] enumerateObjectsUsingBlock:^(NSString *obj, NSUInteger idx, BOOL *stop) {
             [result addObject:[CDUser userWithID:idx + 1 name:obj andRating:arc4random_uniform(10000) / 100. inManagedObjectContext:self.managedObjectContext]];
+        }];
+        [self saveContext];
+        results = result.copy;
+    }
+    return results;
+}
+
+- (NSArray *)myusersArray {
+    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"MyUser"];
+    request.sortDescriptors = @[ [NSSortDescriptor sortDescriptorWithKey:@"uid" ascending:YES] ];
+    NSError *error = nil;
+    NSArray *results = [self.managedObjectContext executeFetchRequest:request error:&error];
+    if (error) {
+        NSLog(@"%@", error);
+        return nil;
+    }
+    else if (results.count == 0) {
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"names" ofType:@"txt"];
+        NSString *namesFileContent = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+        NSMutableArray *result = [NSMutableArray new];
+        [[[namesFileContent componentsSeparatedByString:@"\n"] filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"length > 1"]] enumerateObjectsUsingBlock:^(NSString *obj, NSUInteger idx, BOOL *stop) {
+            [result addObject:[MyUser userWithID:idx + 1 name:obj inManagedObjectContext:self.managedObjectContext]];
         }];
         [self saveContext];
         results = result.copy;

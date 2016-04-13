@@ -83,6 +83,10 @@
     return result.copy;
 }
 
+- (NSArray *)myusersArray {
+    return nil;
+}
+
 - (NSArray *)booksArrayUsingQuery:(NSString *)query {
     if (query.length == 0)
         return nil;
