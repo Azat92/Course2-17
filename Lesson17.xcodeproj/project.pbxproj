@@ -30,6 +30,13 @@
 		AA9E63151C9F0A420090108F /* CDBook.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9E630F1C9F0A420090108F /* CDBook.m */; };
 		AA9E63161C9F0A420090108F /* CDUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9E63111C9F0A420090108F /* CDUser+CoreDataProperties.m */; };
 		AA9E63171C9F0A420090108F /* CDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = AA9E63131C9F0A420090108F /* CDUser.m */; };
+		E5A3309C1CBA8BEB00E262E5 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A3309B1CBA8BEB00E262E5 /* MyTableViewController.m */; };
+		E5A330AE1CBAA24D00E262E5 /* MyItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A330A71CBAA24D00E262E5 /* MyItem+CoreDataProperties.m */; };
+		E5A330AF1CBAA24D00E262E5 /* MyItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A330A91CBAA24D00E262E5 /* MyItem.m */; };
+		E5A330B01CBAA24D00E262E5 /* MyUser+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A330AB1CBAA24D00E262E5 /* MyUser+CoreDataProperties.m */; };
+		E5A330B11CBAA24D00E262E5 /* MyUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A330AD1CBAA24D00E262E5 /* MyUser.m */; };
+		E5A330B81CBAB26800E262E5 /* ItemsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A330B71CBAB26800E262E5 /* ItemsTableViewController.m */; };
+		E5A330BB1CBAB3BD00E262E5 /* MySplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A330BA1CBAB3BD00E262E5 /* MySplitViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +84,21 @@
 		AA9E633E1C9F16CF0090108F /* Protocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Protocols.h; sourceTree = "<group>"; };
 		BB462780CFD1A48FC9BC2EB0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE68803D36838671DE92F635 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E5A3309A1CBA8BEB00E262E5 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		E5A3309B1CBA8BEB00E262E5 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		E5A330A61CBAA24D00E262E5 /* MyItem+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MyItem+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E5A330A71CBAA24D00E262E5 /* MyItem+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MyItem+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E5A330A81CBAA24D00E262E5 /* MyItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyItem.h; sourceTree = "<group>"; };
+		E5A330A91CBAA24D00E262E5 /* MyItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyItem.m; sourceTree = "<group>"; };
+		E5A330AA1CBAA24D00E262E5 /* MyUser+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MyUser+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E5A330AB1CBAA24D00E262E5 /* MyUser+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MyUser+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E5A330AC1CBAA24D00E262E5 /* MyUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUser.h; sourceTree = "<group>"; };
+		E5A330AD1CBAA24D00E262E5 /* MyUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUser.m; sourceTree = "<group>"; };
+		E5A330B21CBAA74600E262E5 /* HW version.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "HW version.xcdatamodel"; sourceTree = "<group>"; };
+		E5A330B61CBAB26800E262E5 /* ItemsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsTableViewController.h; sourceTree = "<group>"; };
+		E5A330B71CBAB26800E262E5 /* ItemsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsTableViewController.m; sourceTree = "<group>"; };
+		E5A330B91CBAB3BD00E262E5 /* MySplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySplitViewController.h; sourceTree = "<group>"; };
+		E5A330BA1CBAB3BD00E262E5 /* MySplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySplitViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +187,7 @@
 		AA2C9D3E1C94884400D0B172 /* Lesson17 */ = {
 			isa = PBXGroup;
 			children = (
+				E5A330991CBA8BAE00E262E5 /* HW */,
 				AA2C9D481C94884400D0B172 /* Main.storyboard */,
 				AA26BD8B1C95D12200DDBD9B /* Model */,
 				AA26BD8C1C95D13000DDBD9B /* Controller */,
@@ -218,6 +241,27 @@
 				AA9E63091C9F096E0090108F /* Lesson17.xcdatamodeld */,
 			);
 			name = CoreData;
+			sourceTree = "<group>";
+		};
+		E5A330991CBA8BAE00E262E5 /* HW */ = {
+			isa = PBXGroup;
+			children = (
+				E5A330A61CBAA24D00E262E5 /* MyItem+CoreDataProperties.h */,
+				E5A330A71CBAA24D00E262E5 /* MyItem+CoreDataProperties.m */,
+				E5A330A81CBAA24D00E262E5 /* MyItem.h */,
+				E5A330A91CBAA24D00E262E5 /* MyItem.m */,
+				E5A330AA1CBAA24D00E262E5 /* MyUser+CoreDataProperties.h */,
+				E5A330AB1CBAA24D00E262E5 /* MyUser+CoreDataProperties.m */,
+				E5A330AC1CBAA24D00E262E5 /* MyUser.h */,
+				E5A330AD1CBAA24D00E262E5 /* MyUser.m */,
+				E5A3309A1CBA8BEB00E262E5 /* MyTableViewController.h */,
+				E5A3309B1CBA8BEB00E262E5 /* MyTableViewController.m */,
+				E5A330B61CBAB26800E262E5 /* ItemsTableViewController.h */,
+				E5A330B71CBAB26800E262E5 /* ItemsTableViewController.m */,
+				E5A330B91CBAB3BD00E262E5 /* MySplitViewController.h */,
+				E5A330BA1CBAB3BD00E262E5 /* MySplitViewController.m */,
+			);
+			name = HW;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,20 +390,27 @@
 				AA9E63071C9F08690090108F /* CoreDataWorker.m in Sources */,
 				AA2C9D5D1C94B5DD00D0B172 /* User.m in Sources */,
 				AA2C9D471C94884400D0B172 /* TableViewController.m in Sources */,
+				E5A330BB1CBAB3BD00E262E5 /* MySplitViewController.m in Sources */,
+				E5A330AF1CBAA24D00E262E5 /* MyItem.m in Sources */,
 				AA9E630B1C9F096E0090108F /* Lesson17.xcdatamodeld in Sources */,
 				AA9E63171C9F0A420090108F /* CDUser.m in Sources */,
+				E5A330B81CBAB26800E262E5 /* ItemsTableViewController.m in Sources */,
 				AA3B84D71CAB075900056F91 /* GradesTableViewController.m in Sources */,
 				AA2C9D441C94884400D0B172 /* AppDelegate.m in Sources */,
 				AA2C9D581C948E5B00D0B172 /* DatabaseWorker.m in Sources */,
 				AA9E63151C9F0A420090108F /* CDBook.m in Sources */,
 				AA26BD861C95C5EB00DDBD9B /* Book.m in Sources */,
+				E5A330B01CBAA24D00E262E5 /* MyUser+CoreDataProperties.m in Sources */,
 				AA3B84E01CAB152200056F91 /* CustomSplitViewController.m in Sources */,
 				AA2C9D411C94884400D0B172 /* main.m in Sources */,
 				AA26BD891C95C6F900DDBD9B /* BooksTableViewController.m in Sources */,
 				AA3B84DC1CAB07E900056F91 /* CDGrade+CoreDataProperties.m in Sources */,
 				AA9E63141C9F0A420090108F /* CDBook+CoreDataProperties.m in Sources */,
+				E5A3309C1CBA8BEB00E262E5 /* MyTableViewController.m in Sources */,
 				AA3B84DD1CAB07E900056F91 /* CDGrade.m in Sources */,
+				E5A330AE1CBAA24D00E262E5 /* MyItem+CoreDataProperties.m in Sources */,
 				AA9E63161C9F0A420090108F /* CDUser+CoreDataProperties.m in Sources */,
+				E5A330B11CBAA24D00E262E5 /* MyUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +473,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -461,7 +512,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -520,10 +571,11 @@
 		AA9E63091C9F096E0090108F /* Lesson17.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				E5A330B21CBAA74600E262E5 /* HW version.xcdatamodel */,
 				AA3B84D41CAB05A700056F91 /* Grades.xcdatamodel */,
 				AA9E630A1C9F096E0090108F /* Lesson17.xcdatamodel */,
 			);
-			currentVersion = AA3B84D41CAB05A700056F91 /* Grades.xcdatamodel */;
+			currentVersion = E5A330B21CBAA74600E262E5 /* HW version.xcdatamodel */;
 			path = Lesson17.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

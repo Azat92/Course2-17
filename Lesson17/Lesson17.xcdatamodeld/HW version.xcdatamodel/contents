@@ -24,13 +24,13 @@
     <entity name="MyUser" representedClassName="MyUser" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="uid" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <relationship name="items" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="MyItem" inverseName="user" inverseEntity="MyItem" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="MyItem" inverseName="user" inverseEntity="MyItem" syncable="YES"/>
     </entity>
     <elements>
         <element name="CDBook" positionX="-225" positionY="-261" width="128" height="90"/>
         <element name="CDGrade" positionX="-189" positionY="-63" width="128" height="75"/>
-        <element name="CDUser" positionX="-38" positionY="-252" width="128" height="103"/>
-        <element name="MyUser" positionX="-27" positionY="153" width="128" height="88"/>
+        <element name="CDUser" positionX="-38" positionY="-252" width="128" height="105"/>
         <element name="MyItem" positionX="171" positionY="-87" width="128" height="105"/>
+        <element name="MyUser" positionX="-27" positionY="153" width="128" height="90"/>
     </elements>
 </model>

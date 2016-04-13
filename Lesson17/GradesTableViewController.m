@@ -31,7 +31,7 @@
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Add grade" message:@"Please enter value" preferredStyle:UIAlertControllerStyleAlert];
     [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         textField.placeholder = @"Value should be greater than zero";
-        textField.keyboardType = UIKeyboardTypeDecimalPad;
+       
     }];
     __weak UIAlertController *walert = alert;
     [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {

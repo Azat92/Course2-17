@@ -7,6 +7,7 @@
 //
 
 @protocol DataAdapterProtocol <NSObject>
+@property (nonatomic, readonly) NSArray *myusersArray;
 @property (nonatomic, readonly) NSArray *usersArray;
 - (NSArray *)booksArrayUsingQuery:(NSString *)query;
 @end
@@ -15,6 +16,11 @@
 @property (nonatomic, strong) NSNumber *uid;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSNumber *rating;
+@end
+
+@protocol MyUserProtocol <NSObject>
+@property (nonatomic, strong) NSNumber *uid;
+@property (nonatomic, strong) NSString *name;
 @end
 
 @protocol BookProtocol <NSObject>
