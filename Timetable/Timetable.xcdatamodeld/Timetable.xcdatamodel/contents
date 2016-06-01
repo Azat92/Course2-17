@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15C50" minimumToolsVersion="Automatic">
+    <entity name="Group" representedClassName="Group" syncable="YES">
+        <attribute name="elderName" optional="YES" attributeType="String" minValueString="6" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" minValueString="6" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" minValueString="5" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String" minValueString="12" maxValueString="12" syncable="YES"/>
+        <relationship name="lessons" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Lesson" inverseName="group" inverseEntity="Lesson" syncable="YES"/>
+    </entity>
+    <entity name="Lesson" representedClassName="Lesson" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" minValueString="2" syncable="YES"/>
+        <attribute name="teacher" optional="YES" attributeType="String" minValueString="6" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="String" minValueString="5" maxValueString="7" syncable="YES"/>
+        <attribute name="weekday" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="group" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Group" inverseName="lessons" inverseEntity="Group" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Group" positionX="-18" positionY="27" width="128" height="120"/>
+        <element name="Lesson" positionX="-315" positionY="171" width="128" height="120"/>
+    </elements>
+</model>
