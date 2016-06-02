@@ -15,27 +15,37 @@
 
 @interface GroupsTableViewController ()
 
-@property NSMutableArray *groups;
 @property NSInteger groupIndex;
+- (NSMutableArray *)groups;
+
 
 @end
 
 @implementation GroupsTableViewController
 
+- (NSMutableArray*)groups {
+    static NSMutableArray* theArray = nil;
+    if (theArray == nil) {
+        theArray = [[NSMutableArray alloc] init];
+    }
+    return theArray;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Group"];
     NSManagedObjectContext *moc = [CoreDataManager shared].managedObjectContext;
-    _groups = [NSMutableArray new];
-    [_groups addObjectsFromArray:[moc executeFetchRequest:request error:nil]];
+    if (self.groups.count == 0) {
+        [self.groups addObjectsFromArray:[moc executeFetchRequest:request error:nil]];
+    }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return _groups.count == 0 ? 1 : 2;
+    return self.groups.count == 0 ? 1 : 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return section == 0 ? 1 : _groups.count;
+    return section == 0 ? 1 : self.groups.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -44,7 +54,7 @@
         cell = [tableView dequeueReusableCellWithIdentifier:@"newGroupCell" forIndexPath:indexPath];
     } else {
         cell = [tableView dequeueReusableCellWithIdentifier:@"groupCell" forIndexPath:indexPath];
-        cell.textLabel.text = [_groups[indexPath.row] name];
+        cell.textLabel.text = [self.groups[indexPath.row] name];
     }
     return cell;
 }
@@ -54,15 +64,16 @@
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    Group *group = _groups[indexPath.row];
+    Group *group = self.groups[indexPath.row];
     NSManagedObjectContext *moc = [CoreDataManager shared].managedObjectContext;
-    [_groups removeObjectAtIndex:indexPath.row];
+    [self.groups removeObjectAtIndex:indexPath.row];
     [moc deleteObject:group];
     [moc save:nil];
-    if (_groups.count != 0) {
+    if (self.groups.count != 0) {
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
         return;
     }
+
     [self.tableView reloadData];
 }
 
@@ -75,14 +86,15 @@
     group.phoneNumber = controller.phoneNumberTextField.text;
     group.email = controller.mailTextField.text;
     [moc save:nil];
-    [_groups addObject:group];
-    [self.tableView reloadData];
+    [self.groups addObject:group];
+    [[[[[self.splitViewController.viewControllers firstObject] viewControllers] firstObject] tableView] reloadData];
+    [[[[[self.splitViewController.viewControllers[1] viewControllers][1] viewControllers] firstObject] tableView] reloadData];
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"groupsToGroup"]) {
         GroupViewController *groupController = (GroupViewController *)segue.destinationViewController;
-        groupController.group = _groups[_groupIndex];
+        groupController.group = self.groups[_groupIndex];
     }
 }
 

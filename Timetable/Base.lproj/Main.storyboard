@@ -409,7 +409,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupCell" id="0mD-I0-6X1">
-                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0mD-I0-6X1" id="ood-r9-0YQ">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -567,7 +567,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="groupCell" id="TGr-Bu-jpG">
-                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TGr-Bu-jpG" id="hnh-69-Smk">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -606,7 +606,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="2ZJ-cj-fIO">
             <objects>
-                <tabBarController id="Imp-BN-EF9" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="Imp-BN-EF9" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="JLW-82-7bY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -659,7 +659,7 @@
         <!--Группы-->
         <scene sceneID="oRq-45-HFf">
             <objects>
-                <tableViewController id="t4f-eT-2H1" customClass="GroupsTableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="groups" id="t4f-eT-2H1" customClass="GroupsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ydD-Sn-88s">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -796,8 +796,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ic1-do-U0r"/>
+        <segue reference="Rzf-82-X0T"/>
+        <segue reference="31k-yE-lTw"/>
         <segue reference="KHu-6U-59c"/>
-        <segue reference="PgT-sI-iJZ"/>
     </inferredMetricsTieBreakers>
 </document>
