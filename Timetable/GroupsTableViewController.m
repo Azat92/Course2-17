@@ -69,12 +69,8 @@
     [self.groups removeObjectAtIndex:indexPath.row];
     [moc deleteObject:group];
     [moc save:nil];
-    if (self.groups.count != 0) {
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-        return;
-    }
-
-    [self.tableView reloadData];
+    [[[[[self.splitViewController.viewControllers firstObject] viewControllers] firstObject] tableView] reloadData];
+    [[[[[self.splitViewController.viewControllers[1] viewControllers][1] viewControllers] firstObject] tableView] reloadData];
 }
 
 - (IBAction)addNewGroup:(UIStoryboardSegue *)segue {
