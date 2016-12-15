@@ -1,0 +1,22 @@
+//
+//  Lesson.h
+//  Timetable
+//
+//  Created by Эдуард Рязапов on 23.01.16.
+//  Copyright © 2016 Эдуард Рязапов. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
+
+@class Group;
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface Lesson : NSManagedObject
+
+@end
+
+NS_ASSUME_NONNULL_END
+
+#import "Lesson+CoreDataProperties.h"
